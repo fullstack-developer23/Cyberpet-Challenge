@@ -38,25 +38,20 @@ html{
 }
 
 #feed{
-
+    color: orange;
 }
 
 #drink{
-
+    color: aqua;
 }
 
 #nap{
-
+    color: rgb(181, 181, 181);
 }
 
-.begin{
-    font-size: 30px;
-    width: 120px;
-    margin: 10px;
-    background-color: rgb(47, 255, 85);
-    color: rgb(11, 5, 5);
-    height: 40px;
-    border-radius: 5px;
+#play{
+    background-color: rgb(0, 0, 0);
+    color: rgb(211, 211, 17);
 }
 
 .progressLabel{
