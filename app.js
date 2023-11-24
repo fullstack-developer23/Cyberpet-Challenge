@@ -30,28 +30,37 @@
 
 // -------------------------------------------------------------------------------------------------------------------------
 const startGame = (selectedPet) => {
-    console.log(selectedPet)
+    animalImg.style.display = "none";
+    chosen.style.display = "block";
+    selectedImg.src=`./images/${selectedPet}.gif`
     }
 
 
-let selectedPet = '' 
-
-let tiger = document.getElementById("tiger");
-let dog = document.getElementById("dog");
-let cat = document.getElementById("cat");
+let selectedPet = "" 
+// getting images by Id
+let tiger = document.getElementById("tiger.gif");
+let dog = document.getElementById("dog.gif");
+let cat = document.getElementById("cat.gif"); 
+let animalImg = document.getElementById("animalImg")
+let chosen = document.getElementById("chosen")
+let selectedImg = document.getElementById("selectedImg")
 // event listeners for the three animal buttons.
-tiger.addEventListener('click', () => {
-    selectedPet = 'tiger';
+
+tiger.addEventListener("click", () => {
+    selectedPet = "tiger";
+    startGame(selectedPet)
 })
 
-dog.addEventListener('click', () => {
-    selectedPet = 'dog';
+
+dog.addEventListener("click", () => {
+    selectedPet = "dog";
+    startGame(selectedPet)
 })
 
-cat.addEventListener('click', () => {
-    selectedPet = 'cat';
+cat.addEventListener("click", () => {
+    selectedPet = "cat";
+    startGame(selectedPet)
 })
-startGame(selectedPet)
 
 
 // // Expand (53 lines) CollapseCyberPetJavaScriptlet image = document.getElementById("image");
