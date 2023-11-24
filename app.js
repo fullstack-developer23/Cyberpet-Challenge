@@ -33,9 +33,16 @@ const startGame = (selectedPet) => {
     animalImg.style.display = "none";
     chosen.style.display = "block";
     selectedImg.src=`./images/${selectedPet}.gif`;
-    healthBar.style.display = "block";
-    buttons.style.display = "block";
-    progress
+// This will happen every second.
+    
+    setInterval(reduceProgress, 1000);
+    
+    function reduceProgress(){
+        hunger.value -= 2;
+        thirst.value -= 2;
+        energy.value -= 2;
+        happiness.value -= 2;
+    }
     }
 
 
@@ -57,7 +64,11 @@ let hunger = document.getElementById("hunger");
 let thirst = document.getElementById("thirst");
 let energy = document.getElementById("energy");
 let happiness = document.getElementById("happiness");
+let begin = document.getElementById("begin");
 // event listeners for the three animal buttons.
+
+
+
 
 tiger.addEventListener("click", () => {
     selectedPet = "tiger";
@@ -75,12 +86,30 @@ cat.addEventListener("click", () => {
     startGame(selectedPet)
 })
 
-play.addEventListener("click", () => {
-    hunger.value -= 1
-    thirst.value -= 1
-    energy.value -= 1
-    happiness.value -= 1
+
+feed.addEventListener("click", () => {
+    hunger.value += 5;
 })
+
+drink.addEventListener("click", () => {
+    thirst.value += 5;
+    hunger.value += 2;
+})
+
+nap.addEventListener("click", () => {
+    energy.value += 10;
+    happiness.value +- 2;
+    hunger.value -=3;
+    thirst.value -=3;
+})
+
+play.addEventListener("click", () => {
+    happiness.value += 3;
+    energy.value -= 2;
+    hunger.value -=3;
+    thirst.value -= 2;
+})
+
 
 
 // // Expand (53 lines) CollapseCyberPetJavaScriptlet image = document.getElementById("image");
