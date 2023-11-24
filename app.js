@@ -29,88 +29,108 @@
 // }
 
 // -------------------------------------------------------------------------------------------------------------------------
-let dog = document.getElementById("")
 const startGame = (selectedPet) => {
+    console.log(selectedPet)
+    }
 
-}
 
-// Expand (53 lines) CollapseCyberPetJavaScriptlet image = document.getElementById("image");
-let petMessage = document.getElementById("petMessage");
+let selectedPet = '' 
 
-class Animal {
-    constructor(name){
-        this.name = name;
-        this.health = 100;
-        this.hunger = 100;
-        this.thirst = 100;
-    };
-    drink() {
-        this.health += 10;
-        this.thirst += 10;
-    };
-    eat() {
-        this.health += 10;
-        this.thirst -= 5;
-        this.hunger += 10;
-    };
-};
-
-tigerChar.addEventListener('click', () => {
-    total = 0;
-    score.textContent = total;
-    info.textContent = "";
-    image.src="";
-    playAgain.style.display="none";
-    roll.style.display = "block";
-})
-dogChar.addEventListener('click', () => {
-    total = 0;
-    score.textContent = total;
-    info.textContent = "";
-    image.src="";
-    playAgain.style.display="none";
-    roll.style.display = "block";
-})
-catChar.addEventListener('click', () => {
-    total = 0;
-    score.textContent = total;
-    info.textContent = "";
-    image.src="";
-    playAgain.style.display="none";
-    roll.style.display = "block";
+let tiger = document.getElementById("tiger");
+let dog = document.getElementById("dog");
+let cat = document.getElementById("cat");
+// event listeners for the three animal buttons.
+tiger.addEventListener('click', () => {
+    selectedPet = 'tiger';
 })
 
-class Tiger extends Animal {
-    constructor(name){
-        super (name);
-        this.satisfied = 100;
-    };
-    playBall() {
-        this.hunger -= 10;
-        this.thirst -= 5;
-        this.happy += 10;
-    };
-}
-class Dog extends Animal {
-    constructor(name){
-        super (name);
-        this.happy = 100;
-    };
-    playBall() {
-        this.hunger -= 10;
-        this.thirst -= 5;
-        this.happy += 10;
-    };
-}
-class Cat extends Animal {
-    constructor(name){
-        super (name);
-        this.satisfied = 100;
-    };
+dog.addEventListener('click', () => {
+    selectedPet = 'dog';
+})
 
-    playBall() {
-        this.hunger -= 10;
-        this.thirst -= 5;
-        this.happy += 10;
-    };
-}
+cat.addEventListener('click', () => {
+    selectedPet = 'cat';
+})
+startGame(selectedPet)
+
+
+// // Expand (53 lines) CollapseCyberPetJavaScriptlet image = document.getElementById("image");
+// let petMessage = document.getElementById("petMessage");
+
+// class Animal {
+//     constructor(name){
+//         this.name = name;
+//         this.health = 100;
+//         this.hunger = 100;
+//         this.thirst = 100;
+//     };
+//     drink() {
+//         this.health += 10;
+//         this.thirst += 10;
+//     };
+//     eat() {
+//         this.health += 10;
+//         this.thirst -= 5;
+//         this.hunger += 10;
+//     };
+// };
+
+// tigerChar.addEventListener('click', () => {
+//     total = 0;
+//     score.textContent = total;
+//     info.textContent = "";
+//     image.src="";
+//     playAgain.style.display="none";
+//     roll.style.display = "block";
+// })
+// dogChar.addEventListener('click', () => {
+//     total = 0;
+//     score.textContent = total;
+//     info.textContent = "";
+//     image.src="";
+//     playAgain.style.display="none";
+//     roll.style.display = "block";
+// })
+// catChar.addEventListener('click', () => {
+//     total = 0;
+//     score.textContent = total;
+//     info.textContent = "";
+//     image.src="";
+//     playAgain.style.display="none";
+//     roll.style.display = "block";
+// })
+
+// class Tiger extends Animal {
+//     constructor(name){
+//         super (name);
+//         this.satisfied = 100;
+//     };
+//     playBall() {
+//         this.hunger -= 10;
+//         this.thirst -= 5;
+//         this.happy += 10;
+//     };
+// }
+// class Dog extends Animal {
+//     constructor(name){
+//         super (name);
+//         this.happy = 100;
+//     };
+//     playBall() {
+//         this.hunger -= 10;
+//         this.thirst -= 5;
+//         this.happy += 10;
+//     };
+// }
+// class Cat extends Animal {
+//     constructor(name){
+//         super (name);
+//         this.satisfied = 100;
+//     };
+
+//     playBall() {
+//         this.hunger -= 10;
+//         this.thirst -= 5;
+//         this.happy += 10;
+//     };
+// }
