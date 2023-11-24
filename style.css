@@ -16,7 +16,19 @@ html{
 }
 
 #pet{
-    
+    font-size: 70px;
+}
+
+#petName{
+    font-size: 100px;
+}
+
+#buttons{
+    align-items: center;
+    font-size: 100px;
+    justify-content: center;
+    text-align: center;
+    display: none;
 }
 
 .actions{
@@ -42,6 +54,12 @@ html{
 
 .healthBar{
     color: black;
-    background-color: red;
+    background-color: rgba(0, 255, 72, 0.729);
+    display: none;
 }
 
+#gameOver{
+    color: red;
+    background-color: black;
+    display: none;
+}

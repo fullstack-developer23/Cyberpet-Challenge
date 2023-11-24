@@ -32,18 +32,25 @@
 const startGame = (selectedPet) => {
     animalImg.style.display = "none";
     chosen.style.display = "block";
-    selectedImg.src=`./images/${selectedPet}.gif`
+    selectedImg.src=`./images/${selectedPet}.gif`;
+    healthBar.style.display = "block";
+    buttons.style.display = "block";
+
     }
 
 
 let selectedPet = "" 
+
 // getting images by Id
+
 let tiger = document.getElementById("tiger.gif");
 let dog = document.getElementById("dog.gif");
 let cat = document.getElementById("cat.gif"); 
 let animalImg = document.getElementById("animalImg")
 let chosen = document.getElementById("chosen")
 let selectedImg = document.getElementById("selectedImg")
+let healthBar = document.getElementById("healthBar")
+let buttons = document.getElementById("buttons")
 // event listeners for the three animal buttons.
 
 tiger.addEventListener("click", () => {
