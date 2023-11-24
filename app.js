@@ -35,7 +35,7 @@ const startGame = (selectedPet) => {
     selectedImg.src=`./images/${selectedPet}.gif`;
     healthBar.style.display = "block";
     buttons.style.display = "block";
-
+    progress
     }
 
 
@@ -46,11 +46,17 @@ let selectedPet = ""
 let tiger = document.getElementById("tiger.gif");
 let dog = document.getElementById("dog.gif");
 let cat = document.getElementById("cat.gif"); 
-let animalImg = document.getElementById("animalImg")
-let chosen = document.getElementById("chosen")
-let selectedImg = document.getElementById("selectedImg")
-let healthBar = document.getElementById("healthBar")
-let buttons = document.getElementById("buttons")
+let animalImg = document.getElementById("animalImg");
+let chosen = document.getElementById("chosen");
+let selectedImg = document.getElementById("selectedImg");
+let healthBar = document.getElementById("healthBar");
+let buttons = document.getElementById("buttons");
+let progress = document.getElementById("progress");
+let play = document.getElementById("play");
+let hunger = document.getElementById("hunger");
+let thirst = document.getElementById("thirst");
+let energy = document.getElementById("energy");
+let happiness = document.getElementById("happiness");
 // event listeners for the three animal buttons.
 
 tiger.addEventListener("click", () => {
@@ -67,6 +73,13 @@ dog.addEventListener("click", () => {
 cat.addEventListener("click", () => {
     selectedPet = "cat";
     startGame(selectedPet)
+})
+
+play.addEventListener("click", () => {
+    hunger.value -= 1
+    thirst.value -= 1
+    energy.value -= 1
+    happiness.value -= 1
 })
 
 

@@ -21,27 +21,35 @@
         <img id="cat.gif" class="gifs" src ="./images/cat.gif">
       </div>
 
-   <div id="chosen" class = "actions">
+   <div id="chosen" class="actions">
     <img id="selectedImg" class="selectedAnimal" src="">
+    <br>
+    <button id="play" class="play">Begin!</button>
       <div id="buttons">
-        <button id="feed">Feed</button>
-        <button id="drink">Drink</button>
-        <button id="nap">Nap</button>
-        <button id="play">Play</button>
+        <button id="feed" class="button">Feed</button>
+        <button id="drink" class="button">Drink</button>
+        <button id="nap" class="button">Nap</button>
+        <button id="play" class="button">Play</button>
+      </div>
+      <div class="progressBar">
+        
+          <label for="hunger" class="progressLabel">HUNGER:</label>
+          <progress id="hunger" class="progress" value="95" max="100"></progress>
+          <label for="thirst" class="progressLabel">THIRST:</label>
+          <progress id="thirst" class="progress" value="95" max="100"> </progress>
+          <label for="energy" class="progressLabel">ENERGY:</label>
+          <progress id="energy" class="progress" value="95" max="100"></progress>
+          <label for="happiness" class="progressLabel">HAPPINESS:</label>
+          <progress id="happiness" class="progress" value="95" max="100"></progress>
       </div>
    </div>
 
-   <div class="healthBar">
-    <div class = "healthBar"> hungry </div>
-    <div class = "healthBar"> thristy </div>
-    <div class = "healthBar"> tired </div>
-    <div class = "healthBar"> relax </div>
+
 
     <div id="gameOver">
       <h2>Game Over</h2>
 
     </div>
-  </div>
 
  
    

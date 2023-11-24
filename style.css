@@ -23,16 +23,18 @@ html{
     font-size: 100px;
 }
 
-#buttons{
-    align-items: center;
-    font-size: 100px;
-    justify-content: center;
-    text-align: center;
-    display: none;
+.button{
+    font-size: 30px;
+    width: 120px;
+    margin: 10px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
 }
 
 .actions{
-
+    display: none;
 }
 
 #feed{
@@ -47,15 +49,32 @@ html{
 
 }
 
-#play{
-
+.play{
+    font-size: 30px;
+    width: 120px;
+    margin: 10px;
+    background-color: rgb(47, 255, 85);
+    color: rgb(11, 5, 5);
+    height: 40px;
+    border-radius: 5px;
 }
 
+.progressLabel{
+    font-size: 25px;
+}
 
-.healthBar{
+.progress{
+    font-size: 50px;
+}
+
+.progressBar{
+    display: flex;
+    flex-direction: row;
     color: black;
-    background-color: rgba(0, 255, 72, 0.729);
-    display: none;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+
 }
 
 #gameOver{
