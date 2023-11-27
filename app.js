@@ -33,6 +33,8 @@ const startGame = (selectedPet) => {
     animalImg.style.display = "none";
     chosen.style.display = "block";
     selectedImg.src=`./images/${selectedPet}.gif`;
+    pet.style.display = "none";
+    petName.style.display = "none";
 // This will happen every second.
     
     setInterval(reduceProgress, 1000);
@@ -42,6 +44,13 @@ const startGame = (selectedPet) => {
         thirst.value -= 2;
         energy.value -= 2;
         happiness.value -= 2;
+        // A condition to check when game is over 
+        if (happiness.value == 0 || hunger.value == 0 || thirst.value == 0 || energy.value == 0){
+            chosen.style.display = 'none';
+            gameover.style.display = 'block';
+            gameover.textContent = "Game is Over";
+        }
+
     }
     }
 
@@ -65,6 +74,8 @@ let thirst = document.getElementById("thirst");
 let energy = document.getElementById("energy");
 let happiness = document.getElementById("happiness");
 let begin = document.getElementById("begin");
+let gameover = document.getElementById("gameOver");
+gameover.style.display = 'none';
 // event listeners for the three animal buttons.
 
 
@@ -109,7 +120,6 @@ play.addEventListener("click", () => {
     hunger.value -=3;
     thirst.value -= 2;
 })
-
 
 
 // // Expand (53 lines) CollapseCyberPetJavaScriptlet image = document.getElementById("image");
